@@ -402,7 +402,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2019/08/31/伤痛之思/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2019/08/31/伤痛之思/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/31/伤痛之思/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -542,10 +542,7 @@
 
   
     <div class="comments" id="comments">
-      <div class="ds-thread" data-thread-key="2019/08/31/伤痛之思/" data-title="伤痛之思" data-url="https://bug0306.github.io/2019/08/31/伤痛之思/">
-      </div>
     </div>
-
   
 
 
@@ -871,44 +868,48 @@
 
   
 
-  
-    
+
   
 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
   <script type="text/javascript">
-    var duoshuoQuery = {short_name:"debuger"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'RbVeNV8c4FWNe0l0RJpRj8kq-gzGzoHsz',
+        appKey: 'szSXXbH74xyx6U8tRXSUuStU',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
   </script>
-
-  
-    
-    
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
